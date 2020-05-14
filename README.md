@@ -44,12 +44,10 @@ Created a simple "robot" that:
   },
 ]
 
-### Acceptable Types
-{
-  UNIPEDAL: 'Unipedal',
-  BIPEDAL: 'Bipedal',
-  QUADRUPEDAL: 'Quadrupedal',
-  ARACHNID: 'Arachnid',
-  RADIAL: 'Radial',
-  AERONAUTICAL: 'Aeronautical'
-}
+### Acceptable Robot Types
+  - 'Unipedal'
+  - 'Bipedal'
+  - 'Quadrupedal'
+  - 'Arachnid'
+  - Radial'
+  - 'Aeronautical'

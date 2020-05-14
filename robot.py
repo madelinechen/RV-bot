@@ -2,6 +2,9 @@ import random
 import time
 
 #TODO: need to delete it /10 part of the tasks
+# need to have all the robots do their tasks concurrently
+# create leadership board
+# think of some other functionality?
 
 class Robot:
     tasks = {"do the dishes": 1, "sweep the house": 3, "do the laundry": 10, "take out the recycling": 4, "make a sammich": 7,
@@ -35,19 +38,26 @@ class Robot:
             time.sleep(taskTime/10)
         return "Finished all tasks"
 
-##### INFERFACE
 def acceptableTypes(userInput):
     types = ["unipedal", "bipedal", "quadrupedal", "arachnid", "radial", "aeronautical"]
     return userInput in types
 
-botName = input("Enter robot name: ")
-print("Acceptable Robot Types: unipedal, bipedal, quadrupedal, arachnid, radial, aeronautical")
+##### INFERFACE
+numRobots = int(input("Enter number of robots you'd like to create: "))
+robotHomes = {}
 
-botType = False
-while not acceptableTypes(botType):
-    botType = input("Enter Acceptable Robot Type: ")
+for i in range(numRobots):
 
-userRobot = Robot(botName, botType)
+    botName = input("Enter robot name: ")
+    print("Acceptable Robot Types: unipedal, bipedal, quadrupedal, arachnid, radial, aeronautical")
 
+    botType = False
+    while not acceptableTypes(botType):
+        botType = input("Enter Acceptable Robot Type: ")
+
+    userRobot = Robot(botName, botType)
+    robotHomes[i] = userRobot
+
+#complete robot tasks
 print("Robot Name, Type: ", userRobot.showRobot())
 print(userRobot.doingTasks())
