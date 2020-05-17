@@ -6,9 +6,10 @@ Created a simple "robot" that:
 - robot completes 5 tasks out of a set list of 10 tasks in the given amount of time
 
 ## How
-1. Download robot.py or clone the repo
+1. Download robot.py and main.py or clone the repo
 2. Navigate to the repo on your local desktop
-3. Run `python robot.py` (or `python3 robot.py` depends on what version you prefer)
+3. Run `python main.py` (or `python3 main.py` depends on what version you prefer) in terminal
+4. Follow the instructions and enjoy :)
 
 ### Given Tasks
 [  {
