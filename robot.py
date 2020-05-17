@@ -5,6 +5,7 @@ import time
 # need to have all the robots do their tasks concurrently
 # create leadership board
 # think of some other functionality?
+# move the interface part into a new file called main?
 
 class Robot:
     tasks = {"do the dishes": 1, "sweep the house": 3, "do the laundry": 10, "take out the recycling": 4, "make a sammich": 7,
@@ -36,7 +37,7 @@ class Robot:
             taskTime = self.tasks[currTask]
             print(currTask,"- ETA: ", taskTime)
             time.sleep(taskTime/10)
-        return "Finished all tasks"
+        return "Finished tasks"
 
 def acceptableTypes(userInput):
     types = ["unipedal", "bipedal", "quadrupedal", "arachnid", "radial", "aeronautical"]
@@ -59,5 +60,7 @@ for i in range(numRobots):
     robotHomes[i] = userRobot
 
 #complete robot tasks
-print("Robot Name, Type: ", userRobot.showRobot())
-print(userRobot.doingTasks())
+for i in range(len(robotHomes)):
+    currBot = robotHomes[i]
+    print("Robot Name, Type: ", currBot.showRobot())
+    print(currBot.doingTasks())
